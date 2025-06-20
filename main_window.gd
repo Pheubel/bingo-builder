@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 
 const BINGO_GRID_BOX_SCENE: PackedScene = preload("uid://cvk583gc6c57w")
 

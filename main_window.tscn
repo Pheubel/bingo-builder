@@ -239,7 +239,7 @@ filters = PackedStringArray("*.png;Image File;image/png")
 use_native_dialog = true
 
 [node name="ImportDialog" type="FileDialog" parent="."]
-title = "Open Bingo Card"
+title = "Open a File"
 ok_button_text = "Open"
 file_mode = 0
 access = 1
