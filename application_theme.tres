@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://n2xg6j5qajgk"]
+
+[ext_resource type="Texture2D" uid="uid://bl1fukq1gfhta" path="res://red x.png" id="1_1gme5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei2yj"]
+bg_color = Color(0.239216, 0.333333, 0.239216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gme5"]
+bg_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[resource]
+BingoCheckedButton/base_type = &"Button"
+BingoCheckedButton/icons/icon = ExtResource("1_1gme5")
+BingoCheckedPanelContainer/base_type = &"PanelContainer"
+BingoCheckedPanelContainer/styles/panel = SubResource("StyleBoxFlat_ei2yj")
+BingoUncheckedPanelContainer/base_type = &"PanelContainer"
+BingoUncheckedPanelContainer/styles/panel = SubResource("StyleBoxFlat_1gme5")

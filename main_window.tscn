@@ -1,0 +1,267 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckh65oavnyluh"]
+
+[ext_resource type="Script" uid="uid://j51pfjqwv5ya" path="res://main_window.gd" id="1_tyee0"]
+
+[node name="MainWindow" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18359, 0.18359, 0.18359, 1)
+script = ExtResource("1_tyee0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BingoSheetContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/BingoSheetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+
+[node name="Spacer" type="Control" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+
+[node name="UpButtonContainer" type="HBoxContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DecreaseUpButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/UpButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-"
+
+[node name="IncreaseUpButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/UpButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+"
+
+[node name="Spacer2" type="Control" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+
+[node name="LeftButtonContainer" type="VBoxContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="DecreaseLeftButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/LeftButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-"
+
+[node name="IncreaseLeftButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/LeftButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+
+[node name="GridAspectContainer" type="AspectRatioContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BingoViewportContainer" type="SubViewportContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer/PanelContainer/GridAspectContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+stretch = true
+
+[node name="BingoViewport" type="SubViewport" parent="HBoxContainer/BingoSheetContainer/GridContainer/PanelContainer/GridAspectContainer/BingoViewportContainer"]
+unique_name_in_owner = true
+disable_3d = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 2
+size = Vector2i(538, 538)
+render_target_update_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/BingoSheetContainer/GridContainer/PanelContainer/GridAspectContainer/BingoViewportContainer/BingoViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BingoMarginContainer" type="MarginContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer/PanelContainer/GridAspectContainer/BingoViewportContainer/BingoViewport/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="BingoGrid" type="GridContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer/PanelContainer/GridAspectContainer/BingoViewportContainer/BingoViewport/ColorRect/BingoMarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="RightButtonContainer" type="VBoxContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="DecreaseRightButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/RightButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-"
+
+[node name="IncreaseRightButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/RightButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+"
+
+[node name="Spacer3" type="Control" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+
+[node name="DownButtonContainer" type="HBoxContainer" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DecreaseDownButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/DownButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-"
+
+[node name="IncreaseDownButton" type="Button" parent="HBoxContainer/BingoSheetContainer/GridContainer/DownButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+"
+
+[node name="Spacer4" type="Control" parent="HBoxContainer/BingoSheetContainer/GridContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SizeLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="ImportGridButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Import Grid"
+
+[node name="ExportGridButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Export Grid"
+
+[node name="CreatePictureButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Create Picture"
+
+[node name="HelpButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Help
+"
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+mouse_passthrough = true
+prefer_native_menu = true
+item_count = 3
+item_0/text = "Edit Image"
+item_0/id = 0
+item_1/text = "Edit Tooltip"
+item_1/id = 1
+item_2/text = "Reset"
+item_2/id = 2
+
+[node name="ImageFileDialog" type="FileDialog" parent="."]
+
+[node name="TooltipDialog" type="ConfirmationDialog" parent="."]
+title = "Set Tooltip Text"
+size = Vector2i(400, 150)
+min_size = Vector2i(400, 150)
+max_size = Vector2i(1000, 32768)
+
+[node name="TooltipTextExit" type="TextEdit" parent="TooltipDialog"]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 392.0
+offset_bottom = 101.0
+placeholder_text = "Enter tooltip text..."
+
+[node name="CreateImageDialog" type="ConfirmationDialog" parent="."]
+title = "Select Quality"
+size = Vector2i(334, 100)
+
+[node name="OptionButton" type="OptionButton" parent="CreateImageDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 326.0
+offset_bottom = 51.0
+selected = 0
+item_count = 5
+popup/item_0/text = "Standard (64x64 per square)"
+popup/item_0/id = 0
+popup/item_1/text = "High (128x128 per square)"
+popup/item_1/id = 1
+popup/item_2/text = "Very High (256x256 per square)"
+popup/item_2/id = 2
+popup/item_3/text = "Ultra (512x512 per square)"
+popup/item_3/id = 3
+popup/item_4/text = "Beyond Ultra (1024x1024 per square)"
+popup/item_4/id = 4
+
+[node name="SaveImageDialog" type="FileDialog" parent="."]
+title = "Save Image"
+force_native = true
+access = 2
+filters = PackedStringArray("*.png;Image File;image/png")
+use_native_dialog = true
+
+[node name="ImportDialog" type="FileDialog" parent="."]
+title = "Open Bingo Card"
+ok_button_text = "Open"
+file_mode = 0
+access = 1
+filters = PackedStringArray("*.bingo")
+use_native_dialog = true
+
+[node name="ExportDialog" type="FileDialog" parent="."]
+title = "Save Bingo Card"
+access = 1
+filters = PackedStringArray("*.bingo")
+use_native_dialog = true
+
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/UpButtonContainer/DecreaseUpButton" to="." method="_on_decrease_up_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/UpButtonContainer/IncreaseUpButton" to="." method="_on_increase_up_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/LeftButtonContainer/DecreaseLeftButton" to="." method="_on_decrease_left_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/LeftButtonContainer/IncreaseLeftButton" to="." method="_on_increase_left_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/RightButtonContainer/DecreaseRightButton" to="." method="_on_decrease_right_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/RightButtonContainer/IncreaseRightButton" to="." method="_on_increase_right_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/DownButtonContainer/DecreaseDownButton" to="." method="_on_decrease_down_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BingoSheetContainer/GridContainer/DownButtonContainer/IncreaseDownButton" to="." method="_on_increase_down_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/ImportGridButton" to="." method="_on_import_grid_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/ExportGridButton" to="." method="_on_export_grid_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/CreatePictureButton" to="." method="_on_create_picture_button_pressed"]
+[connection signal="file_selected" from="ImportDialog" to="." method="_on_import_dialog_file_selected"]
+[connection signal="file_selected" from="ExportDialog" to="." method="_on_export_dialog_file_selected"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvk583gc6c57w"]
+
+[ext_resource type="Script" uid="uid://bqjsoa676w7sa" path="res://bingo_grid_box.gd" id="1_o3dov"]
+
+[node name="BingoGridBox" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"BingoUncheckedPanelContainer"
+script = ExtResource("1_o3dov")
+
+[node name="ItemTextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]
